@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <form class="calc_display" name="cacl">
+            <input type="text" name="cac" readonly placeholder="enter your solutions" class="value" id="inp">
+            <div class="container-display">
+                <div class="clear">
+                    <button class="right bg-green" onclick="document.cacl.cac.value = ''" type="button">C</button>
+                    <button class="right" id='btn' type="button"><</button>
+                </div>
+                <div class="disp-1">
+                    <button onclick="document.cacl.cac.value += '7'" type="button">7</button>
+                    <button onclick="document.cacl.cac.value += '8'" type="button">8</button>
+                    <button onclick="document.cacl.cac.value += '9'" type="button">9</button>
+                    <button onclick="document.cacl.cac.value += '+'" type="button">+</button>
+                </div>
+                <div class="disp-2">
+                    <button onclick="document.cacl.cac.value += '4'" type="button">4</button>
+                    <button onclick="document.cacl.cac.value += '5'" type="button">5</button>
+                    <button onclick="document.cacl.cac.value += '6'" type="button">6</button>
+                    <button onclick="document.cacl.cac.value += '-'" type="button">-</button>
+                </div>
+                <div class="disp-3">
+                    <button onclick="document.cacl.cac.value += '1'" type="button">1</button>
+                    <button onclick="document.cacl.cac.value += '2'" type="button">2</button>
+                    <button onclick="document.cacl.cac.value += '3'" type="button">3</button>
+                    <button onclick="document.cacl.cac.value += '*'" type="button">X</button>
+                </div>
+                <div class="disp-1">
+                    <button onclick="document.cacl.cac.value += '0'" type="button">0</button>
+                    <button onclick="document.cacl.cac.value += '00'" type="button">00</button>
+                    <button onclick="document.cacl.cac.value += '.'" class="dot" type="button">.</button>
+                    <button class="bg-green" onclick="document.cacl.cac.value = eval(document.cacl.cac.value) " type="button">=</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./vanilla-tilt.js-master/dist/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container"), {
+            max: 25,
+            speed: 400
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".container"));
+    </script>
+
+
+    <script src="./main.js">
+     
+    </script>
+</body>
+</html>
